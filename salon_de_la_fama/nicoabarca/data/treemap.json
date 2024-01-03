@@ -1,0 +1,445 @@
+{
+    "name": "Technologies",
+    "childrens": [
+        {
+            "name": "Language",
+            "childrens": [
+                {
+                    "name": "Haskell",
+                    "value": 707,
+                    "childrens": []
+                },
+                {
+                    "name": "C#",
+                    "value": 14365,
+                    "childrens": []
+                },
+                {
+                    "name": "Node.js",
+                    "value": 19605,
+                    "childrens": []
+                },
+                {
+                    "name": "C",
+                    "value": 6604,
+                    "childrens": []
+                },
+                {
+                    "name": "Erlang",
+                    "value": 398,
+                    "childrens": []
+                },
+                {
+                    "name": "Bash/Shell",
+                    "value": 12990,
+                    "childrens": []
+                },
+                {
+                    "name": "COBOL",
+                    "value": 250,
+                    "childrens": []
+                },
+                {
+                    "name": "Rust",
+                    "value": 2648,
+                    "childrens": []
+                },
+                {
+                    "name": "VBA",
+                    "value": 2120,
+                    "childrens": []
+                },
+                {
+                    "name": "Java",
+                    "value": 16167,
+                    "childrens": []
+                },
+                {
+                    "name": "Kotlin",
+                    "value": 3830,
+                    "childrens": []
+                },
+                {
+                    "name": "C++",
+                    "value": 7704,
+                    "childrens": []
+                },
+                {
+                    "name": "Swift",
+                    "value": 2199,
+                    "childrens": []
+                },
+                {
+                    "name": "PHP",
+                    "value": 12299,
+                    "childrens": []
+                },
+                {
+                    "name": "Ruby",
+                    "value": 4362,
+                    "childrens": []
+                },
+                {
+                    "name": "F#",
+                    "value": 538,
+                    "childrens": []
+                },
+                {
+                    "name": "SQL",
+                    "value": 26019,
+                    "childrens": []
+                },
+                {
+                    "name": "Delphi",
+                    "value": 836,
+                    "childrens": []
+                },
+                {
+                    "name": "Python",
+                    "value": 19520,
+                    "childrens": []
+                },
+                {
+                    "name": "PowerShell",
+                    "value": 5737,
+                    "childrens": []
+                },
+                {
+                    "name": "Crystal",
+                    "value": 281,
+                    "childrens": []
+                },
+                {
+                    "name": "Groovy",
+                    "value": 1766,
+                    "childrens": []
+                },
+                {
+                    "name": "Elixir",
+                    "value": 997,
+                    "childrens": []
+                },
+                {
+                    "name": "Assembly",
+                    "value": 1608,
+                    "childrens": []
+                },
+                {
+                    "name": "Objective-C",
+                    "value": 1275,
+                    "childrens": []
+                },
+                {
+                    "name": "Matlab",
+                    "value": 1386,
+                    "childrens": []
+                },
+                {
+                    "name": "Go",
+                    "value": 5201,
+                    "childrens": []
+                },
+                {
+                    "name": "JavaScript",
+                    "value": 35471,
+                    "childrens": []
+                },
+                {
+                    "name": "Scala",
+                    "value": 1296,
+                    "childrens": []
+                },
+                {
+                    "name": "APL",
+                    "value": 176,
+                    "childrens": []
+                },
+                {
+                    "name": "Dart",
+                    "value": 2826,
+                    "childrens": []
+                },
+                {
+                    "name": "LISP",
+                    "value": 512,
+                    "childrens": []
+                },
+                {
+                    "name": "R",
+                    "value": 1658,
+                    "childrens": []
+                },
+                {
+                    "name": "Julia",
+                    "value": 320,
+                    "childrens": []
+                },
+                {
+                    "name": "TypeScript",
+                    "value": 18893,
+                    "childrens": []
+                },
+                {
+                    "name": "HTML/CSS",
+                    "value": 29086,
+                    "childrens": []
+                },
+                {
+                    "name": "Perl",
+                    "value": 1142,
+                    "childrens": []
+                },
+                {
+                    "name": "Clojure",
+                    "value": 942,
+                    "childrens": []
+                }
+            ]
+        },
+        {
+            "name": "Database",
+            "childrens": [
+                {
+                    "name": "Couchbase",
+                    "value": 862,
+                    "childrens": []
+                },
+                {
+                    "name": "Redis",
+                    "value": 12198,
+                    "childrens": []
+                },
+                {
+                    "name": "MariaDB",
+                    "value": 8715,
+                    "childrens": []
+                },
+                {
+                    "name": "DynamoDB",
+                    "value": 4144,
+                    "childrens": []
+                },
+                {
+                    "name": "SQLite",
+                    "value": 14130,
+                    "childrens": []
+                },
+                {
+                    "name": "MySQL",
+                    "value": 23073,
+                    "childrens": []
+                },
+                {
+                    "name": "PostgreSQL",
+                    "value": 21239,
+                    "childrens": []
+                },
+                {
+                    "name": "IBM DB2",
+                    "value": 1016,
+                    "childrens": []
+                },
+                {
+                    "name": "Oracle",
+                    "value": 5925,
+                    "childrens": []
+                },
+                {
+                    "name": "Microsoft SQL Server",
+                    "value": 13658,
+                    "childrens": []
+                },
+                {
+                    "name": "Elasticsearch",
+                    "value": 7775,
+                    "childrens": []
+                },
+                {
+                    "name": "Firebase",
+                    "value": 7434,
+                    "childrens": []
+                },
+                {
+                    "name": "MongoDB",
+                    "value": 14071,
+                    "childrens": []
+                },
+                {
+                    "name": "Cassandra",
+                    "value": 1356,
+                    "childrens": []
+                }
+            ]
+        },
+        {
+            "name": "Webframework",
+            "childrens": [
+                {
+                    "name": "ASP.NET Core ",
+                    "value": 9306,
+                    "childrens": []
+                },
+                {
+                    "name": "Flask",
+                    "value": 6994,
+                    "childrens": []
+                },
+                {
+                    "name": "Express",
+                    "value": 11165,
+                    "childrens": []
+                },
+                {
+                    "name": "Drupal",
+                    "value": 1284,
+                    "childrens": []
+                },
+                {
+                    "name": "jQuery",
+                    "value": 16009,
+                    "childrens": []
+                },
+                {
+                    "name": "Angular",
+                    "value": 11705,
+                    "childrens": []
+                },
+                {
+                    "name": "Vue.js",
+                    "value": 9325,
+                    "childrens": []
+                },
+                {
+                    "name": "FastAPI",
+                    "value": 1919,
+                    "childrens": []
+                },
+                {
+                    "name": "Symfony",
+                    "value": 2028,
+                    "childrens": []
+                },
+                {
+                    "name": "Django",
+                    "value": 6541,
+                    "childrens": []
+                },
+                {
+                    "name": "Laravel",
+                    "value": 5178,
+                    "childrens": []
+                },
+                {
+                    "name": "Spring",
+                    "value": 7651,
+                    "childrens": []
+                },
+                {
+                    "name": "Angular.js",
+                    "value": 5857,
+                    "childrens": []
+                },
+                {
+                    "name": "ASP.NET",
+                    "value": 7760,
+                    "childrens": []
+                },
+                {
+                    "name": "Gatsby",
+                    "value": 1972,
+                    "childrens": []
+                },
+                {
+                    "name": "React.js",
+                    "value": 18712,
+                    "childrens": []
+                },
+                {
+                    "name": "Svelte",
+                    "value": 1202,
+                    "childrens": []
+                },
+                {
+                    "name": "Ruby on Rails",
+                    "value": 3866,
+                    "childrens": []
+                }
+            ]
+        },
+        {
+            "name": "ToolsTech",
+            "childrens": [
+                {
+                    "name": "Unreal Engine",
+                    "value": 1095,
+                    "childrens": []
+                },
+                {
+                    "name": "Terraform",
+                    "value": 4293,
+                    "childrens": []
+                },
+                {
+                    "name": "Puppet",
+                    "value": 985,
+                    "childrens": []
+                },
+                {
+                    "name": "Docker",
+                    "value": 26153,
+                    "childrens": []
+                },
+                {
+                    "name": "Chef",
+                    "value": 743,
+                    "childrens": []
+                },
+                {
+                    "name": "Git",
+                    "value": 42258,
+                    "childrens": []
+                },
+                {
+                    "name": "Yarn",
+                    "value": 10299,
+                    "childrens": []
+                },
+                {
+                    "name": "Kubernetes",
+                    "value": 9449,
+                    "childrens": []
+                },
+                {
+                    "name": "Unity 3D",
+                    "value": 3267,
+                    "childrens": []
+                },
+                {
+                    "name": "Ansible",
+                    "value": 4149,
+                    "childrens": []
+                },
+                {
+                    "name": "Flow",
+                    "value": 673,
+                    "childrens": []
+                },
+                {
+                    "name": "Deno",
+                    "value": 676,
+                    "childrens": []
+                },
+                {
+                    "name": "Pulumi",
+                    "value": 264,
+                    "childrens": []
+                },
+                {
+                    "name": "Xamarin",
+                    "value": 2103,
+                    "childrens": []
+                }
+            ]
+        }
+    ]
+}

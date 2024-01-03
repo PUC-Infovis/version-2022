@@ -1,0 +1,46 @@
+h1, h2, h3 {
+    font-family: Fjalla One;
+    text-align: center;
+}
+
+.container-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+body {
+    margin: 0px 80px;
+}
+
+.link {
+    text-decoration: underline;
+}
+
+p, li {
+    font-family: Barlow Semi Condensed;
+}
+
+#vis-1{
+    text-align: center;
+}
+
+#vis-2{
+    text-align: center;
+}
+
+#vis-3{
+    text-align: center;
+}
+
+text {
+    font-family: Fjalla One;
+    font-size: larger;
+}
+
+h4 {
+    font-family: Fjalla One;
+}
+
+.texto_chico {
+    font-size: small;
+}

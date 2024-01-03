@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>Community</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="examen.css">
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+    </head>
+    <body>
+        <img id="logo" src="img/logo.png">
+        <p>En esta visualización pueden encontrar un resumen de los capítulos, personajes y temporadas de la serie Community.</p>
+
+        <h3>Capítulos</h3>
+        <p style="font-size: 12px;">Cada cuadro indica un capítulo, con su rating en Imbd y el personaje que más diálogo tiene.</p>
+        <div id="resumen"></div>
+
+        <h3>Personajes</h3>
+        <p style="font-size: 12px;">En el gráfico se muestra la participación de un personaje en una temporada determinada, estas se pueden seleccionar arriba del gráfico. </p>
+        <div id="personajes">
+            <div id="filtros">
+                <select id="filtro_personaje">
+                    <option value="Jeff">Jeff</option>
+                    <option value="Britta">Britta</option>
+                    <option value="Abed">Abed</option>
+                    <option value="Shirley">Shirley</option>
+                    <option value="Annie">Annie</option>
+                    <option value="Troy">Troy</option>
+                    <option value="Pierce">Pierce</option>
+                    <option value="Dean">Dean</option>
+                    <option value="Chang">Chang</option>
+                </select>
+                <select  id="filtro_temporada">
+                    <option value="1">Season 1</option>
+                    <option value="2">Season 2</option>
+                    <option value="3">Season 3</option>
+                    <option value="4">Season 4</option>
+                    <option value="5">Season 5</option>
+                    <option value="6">Season 6</option>
+                </select>
+            </div>
+        </div>
+
+        <h3>Temporadas</h3>
+        <!--por alguna razon no estaba funcionando cambiar la letra en el css-->
+        <p style="font-size: 10px;" >*Los porcentajes fueron calculados con una aproximación de tipo piso, por lo que no muestran la realidad completa.</p>
+        <p style="font-size: 12px;">Cada personaje va acompañado de su porcentaje de participación, y este es proporcional al tamaño del icono. Al hacer click en alguna
+        de las temporadas se desplega un gráfico con los ratings de cada capítulo en la temporada.</p>
+        <div id="temporadas"></div>
+        <script src="examen.js"></script>
+
+        <p style="font-size: 10px; align-self: flex-start;">Made with ❤ by sofiaolmedos</p>
+        
+    </body>
+</html>
+
+<!-- correr python -m http.server en la powershell-->

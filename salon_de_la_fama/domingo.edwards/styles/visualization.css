@@ -1,0 +1,98 @@
+/* Visualization */
+
+.figures-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.figures-container__item {
+  margin: 20px;
+}
+
+text {
+  fill: black;
+}
+
+.filter-bar {
+  border: solid;
+  padding: 1em;
+  border-color: var(--gold-4);
+}
+
+.filter-section__item {
+  display: flex;
+  align-items: center;
+}
+
+.filter-section--action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-section__action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vis1 .title {
+  width: 100%;
+}
+
+/* First visualization CSS */
+.vis1 .figure {
+  background: var(--gold-4);
+  background: radial-gradient(circle, var(--gradient-gold-2) 84%, var(--gradient-gold-1) 100%);
+  box-shadow: 0 0 4px 1px var(--gold-6);
+}
+.vis1 .canvas {
+  position: relative;
+  overflow: hidden;
+}
+
+.vis1 .canvas::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('./images/map2.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transform: scaleX(0.96) scaleY(0.96);
+}
+
+/* Second visualization CSS */
+#vis2 .figure {
+  max-width: 100%;
+  padding: 20px;
+  background: var(--gold-4);
+}
+
+#vis2 .canvas {
+  fill: var(--gold-4);
+}
+
+#vis2 .bar {
+  fill: var(--blue-4)
+}
+
+.yAxis line{
+  stroke: var(--blue-4);
+}
+
+.yAxis path{
+  stroke: var(--blue-4);
+}
+
+.xAxis line{
+  stroke: var(--blue-6);
+}
+
+.xAxis path{
+  stroke: var(--blue-6);
+}

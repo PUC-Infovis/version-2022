@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Special+Elite");
+
+body {
+  font-family: "Special Elite", cursive;
+  background: #fffdf5;
+  color: #3f3f5a;
+  max-width: 90%;
+  margin: 10%;
+}
+
+button {
+  font-family: "Special Elite", cursive;
+  background-color: white;
+}
+
+h1, h2 {
+    color: #46a719
+}
+
+table {
+  border: #3f3f5a 1px solid;
+  padding: 2px;
+  margin: 2px;
+  text-align: left;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td,
+table th {
+  border: 1px solid #3f3f5a;
+  padding: 10px;
+}
+table tr:first-child th {
+  border-top: 0;
+}
+table tr:last-child td {
+  border-bottom: 0;
+}
+table tr td:first-child,
+table tr th:first-child {
+  border-left: 0;
+}
+table tr td:last-child,
+table tr th:last-child {
+  border-right: 0;
+}

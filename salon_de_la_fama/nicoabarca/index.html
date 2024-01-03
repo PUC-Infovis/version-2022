@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/index.css" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <title>Tecnologías de desarrollo de software y sus relaciones</title>
+</head>
+
+<body>
+  <main>
+    <h1>Tecnologías de desarrollo de software y sus relaciones</h1>
+    <p>Cada año <a href="https://stackoverflow.com/">StackOverflow</a> hace una encuesta anual la cual es respondida por
+      más de 50.000 personas, de la cual se pueden conocer cuales son las tecnologías actuales que se estan utilizando
+      en el desarrollo de software.
+      Esta herramienta de visualización tiene el objetivo de mostrar las tecnologías más
+      utilizadas por los encuestados y cuales son las que se utilizan en conjunto. </p>
+    <p>Selecciona una tecnología y ve con
+      cuales se utiliza en conjunto!</p>
+    <div class="filter-legends">
+      <div class="treemap-legend"></div>
+      <div class="graph-filters"></div>
+    </div>
+    <div class="visualizations">
+      <div class="treemap-viz"></div>
+      <div class="graph-viz"></div>
+    </div>
+    <script src="js/treemap.js" type="module"></script>
+  </main>
+</body>
+
+</html>

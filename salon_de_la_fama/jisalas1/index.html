@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Terremotos</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v4.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="landing">
+      <h1>Temblores en las regiones de chile</h1>
+      <p>
+        La siguiente herramienta permite explorar y comparar por región los
+        temblores ocurridos en el territorio continental chileno entre enero
+        2010 y octubre de 2022.
+      </p>
+      <p>
+        Se debe seleccionar una región del mapa al lado izquierdo, se mostrarán
+        sus medidas de tendencia central al lado derecho y un gráfico con la
+        evolución de la magnitud de los temblores a lo largo del tiempo. Este
+        último, cuenta con un segundo gráfico que muestra una vista resumida de
+        la tendencia de los datos a lo largo del tiempo, adicionalmente,
+        mediante brush se podrá seleccionar los datos a mostrar en el gráfico
+        principal y mediante un doble click se filtrará la herramienta completa
+        por el rango de datos seleccionados. También,
+      </p>
+      <p>
+        La herramienta cuenta con dos tipos de filtros, uno por rango de tiempo
+        que verificará que los rangos sean válidos y uno por el tipo de magnitud
+        con el que los temblores fueron medidos. Una vez seleccionado el filtro
+        se debe presionar el botón aplicar y para eliminar todos los filtros
+        (incluso el del brush) se debe presionar el botón reset.
+      </p>
+    </div>
+
+    <div class="container">
+      <div id="map"></div>
+
+      <div class="flex-column-center content">
+        <div class="flex-row-center">
+          <div class="flex-column-center filters">
+            <h2>Filtros</h2>
+
+            <div class="input-container">
+              <span>Fecha de inicio</span>
+              <input
+                id="date-min"
+                type="date"
+                min="2010-01-01"
+                max="2022-10-31"
+                value="2010-01-01"
+              />
+            </div>
+
+            <div class="input-container">
+              <span>Fecha de termino</span>
+              <input
+                id="date-max"
+                type="date"
+                min="2010-01-01"
+                max="2022-10-31"
+                value="2022-10-31"
+              />
+            </div>
+
+            <div class="input-container">
+              <span>Tipo de magnitud</span>
+              <a
+                class="comment"
+                href="https://www.usgs.gov/programs/earthquake-hazards/magnitude-types"
+                target="_blank"
+              >
+              ¿Qué significan los tipos?
+              </a>
+              <select id="mag-type">
+                <option selected="selected">mb</option>
+                <option value="mwr">mwr</option>
+                <option value="ml">ml</option>
+                <option value="mww">mww</option>
+                <option value="all">Todos (No recomendado - Experimental)</option>
+              </select>
+            </div>
+
+            <div class="input-container buttons">
+              <button id="apply-filters">Filtrar</button>
+              <button id="reset-filters">Reiniciar</button>
+            </div>
+          </div>
+
+          <div class="data">
+            <h2 id="region">Selecciona una región para empezar</h2>
+            <div class="flex-row-center">
+              <div id="data"></div>
+              <div id="data-point"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="graph_context"></div>
+        <div id="graph_focus"></div>
+      </div>
+    </div>
+
+    <script src="utils.js" charset="utf-8"></script>
+    <script src="script.js" charset="utf-8"></script>
+  </body>
+</html>

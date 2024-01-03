@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shippori Antique">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://d3js.org/d3.v7.js"></script>
+  <title>Examen</title>
+</head>
+
+<body>
+  <div id="context-curtain" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <p class="description">
+        Estas visualizaciones estan basadas en la franquicia Digimon, más especificamente, en el juego 
+        <i class="word-highlight">Digimon Story: Cyber Sleuth</i>.
+        La primera visualización sirve para comparar las estadísticas de distintos Digimon dentro del juego, así como también para
+        ver los atributos relevantes de un Digimon en específico.
+        La segunda visualización muestra el árbol evolutivo de un Digimon en particular, el cual se puede explorar de forma interactiva.
+      </p>
+      <p class="description">
+        Una de las características más importantes que tiene cada Digimon es la capacidad de poder evolucionar en una gran variedad 
+        de formas.
+        <br>
+        Existen distintas etapas evolutivas en las que puede estar un Digimon, y estas siguen el siguiente orden:
+        <br>
+        &emsp;&emsp;&emsp;
+        <i class="word-highlight">Baby &#8594; In-Training &#8594; Rookie &#8594; Champion &#8594; Ultimate &#8594; Mega &#8594; Ultra</i>
+        <br>
+        Cada etapa es más fuerte que la anterior, siendo <i>Ultra</i> la más poderosa. 
+        Adicionalmente, hay una etapa especial llamada <i class="word-highlight">Armor</i> que se da con ciertas situaciones.
+        Además, entre más temprana sea la etapa evolutiva de un Digimon, más posibilidades de evolución tendrá disponibles.
+      </p>
+      <p class="description">
+        También existen distintos <i>tipos</i> para los Digimon, siendo estos <i class="word-highlight">Data, Vaccine, Virus</i> &nbsp;y <i class="word-highlight">Free</i>.
+        Los 3 primeros son los más comunes y siguen una relación de piedra, papel o tijeras en cuanto a la ventaja que tiene un tipo 
+        sobre otro en combate, mientras que el tipo <i>Free</i> no tiene relación y se mantiene como neutro.
+        La relación de los tipos es:
+        <i class="word-highlight">Data < Vaccine < Virus < Data</i>.
+        En las visualizaciones, el cuadro de un Digimon tiene un color que representa su tipo, siendo rojo para <i>Virus</i>, 
+        verde para <i>Vaccine</i>, azul para <i>Data</i> y gris para <i>Free</i>.
+      </p>
+      <p class="description">
+        Uso:
+      </p>
+      <ul class="description">
+        <li>
+          Se pueden seleccionar hasta 5 Digimon en la lista presentada en el lado izquierdo. Una vez que se selecciona un Digimon,
+          se destacará su recuadro con un color verde y se añadirá a la visualización de la parte derecha. Un Digimon se puede 
+          deseleccionar con solo presionarlo de nuevo. 
+          Además, para facilitar la búsqueda se puede buscar por caracteres/nombre o por etapa evolutiva.
+        </li>
+        <li>
+          En la parte inferior de la visualización de la zona derecha, se puede presionar un Digimon para ver más detalles sobre este y 
+          para actualizar la visualización inferior con su árbol evolutivo.
+        </li>
+        <li>
+          En el árbol evolutivo uno se puede mover, hacer <i>zoom</i> y hacer <i>hover</i> sobre un Digimon, lo que desplegará 
+          un tooltip con su información. Además, el árbol sigue una estructura que comienza con el Digimon seleccionado y los niveles
+          que le siguen estan ordenados por etapa evolutiva, siendo las hojas finales los últimos Digimon a los que se pueden llegar.
+        </li>
+      </ul>
+    </div>
+  </div>
+  <button id="context-button" onclick="openNav()">&#10068;</button>
+  <h1 id="main-title"> &#128126; Digimon &#128126;</h1>
+  <h3 id="sub-title"> Choose up to 5 Digimon to compare! </h3>
+  <br>
+  <div class="container">
+    <div id="digimon-vis">
+      <div id="digimon-list">
+        <h3 id="digimon-search">
+          <label for="nSearchedDigimon">
+            Digimon Name <span id="nSearchedDigimon-value"></span>
+          </label>
+          <input type="text" value="" id="nSearchedDigimon">
+        </h3>
+        <div class="buttons-container">
+          <h3 class="buttons-container-element"> Stage: </h3>
+          <select class="buttons-container-element" name="orderBy" id="orderBy">
+            <option value="default">All</option>
+            <option value="Baby">Baby</option>
+            <option value="In-Training">In-Training</option>
+            <option value="Rookie">Rookie</option>
+            <option value="Champion">Champion</option>
+            <option value="Ultimate">Ultimate</option>
+            <option value="Mega">Mega</option>
+            <option value="Ultra">Ultra</option>
+            <option value="Armor">Armor</option>
+            <option value="None">None</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <h3 id="tree-title"> Evolution Tree </h3>
+    <div id="evolution-vis">
+    </div>
+  </div>
+  <script src="visualizations.js"></script>
+</body>
+
+</html>

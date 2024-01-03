@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/components.css">
+  <link rel="stylesheet" href="./styles/visualization.css">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
+  <title>Figura 1 Infovis</title>
+</head>
+
+<body>
+
+  <header>
+    <!-- Logo -->
+    <div class="logo">
+      <img src="./images/LoL_Logo_Rendered_Large/LoL_Logo_Rendered_LARGE.png" alt="Logo Rendered" height="100px">
+    </div>
+
+
+
+  </header>
+  <div class="figures-container">
+    <div class="filter-bar">
+
+      <!-- Team Selector -->
+      <div class="filter-section">
+        <h4>Team Selector</h4>
+        <div class="filter-section__item">
+          <select onchange="fig.figure1.setSelectedTeam(this.value)" name="team-select" id="team-select">
+            <option value="both">Both Teams</option>
+            <option value="bKills">Blue Team</option>
+            <option value="rKills">Red Team</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Game Time Selector -->
+      <div class="filter-section">
+        <h4>Game Time <span class="unit">(Minutes)</span></h4>
+        <div class="filter-section__item">
+          <p>Minimum</p>
+          <input id="min-time-input" type="range" onchange="fig.figure1.setMinTime(this.value)" min="0" max="60"
+            step="0.1" value="0">
+          <span id="minTime">0.0</span>
+        </div>
+        <div class="filter-section__item">
+          <p>Maximum</p>
+          <input id="max-time-input" type="range" onchange="fig.figure1.setMaxTime(this.value)" min="0" max="60"
+            step="0.1" value="60">
+          <span id="maxTime">60.0</span>
+        </div>
+      </div>
+
+      <!-- Game Phase -->
+      <div class="filter-section">
+        <h4>Game Phase</h4>
+        <div class="filter-section__item">
+          <select name="game-phase-selector" id="game-phase-selector" onchange="fig.figure1.setMatchPhase(this.value)">
+            <option value="" disabled="disabled" selected="true">Choose a Game Phase</option>
+            <option value="early">Early Game</option>
+            <option value="mid">Mid Game</option>
+            <option value="late">Late Game</option>
+          </select>
+        </div>
+      </div>
+
+
+      <!-- Movie Controls -->
+      <div class="filter-section--action">
+        <h4>Game Movie</h4>
+        <div class="filter-section__action">
+          <button onclick="fig.figure1.startTimeMovie()">Start</button>
+        </div>
+        <div class="filter-section__item">
+          <p>Movie Speed:</p>
+          <input type="range" id="time-movie-step" min="0.1" max="1" step="0.1" value="0.1"
+            onchange="fig.figure1.setMovieSpeed(this.value)">
+        </div>
+      </div>
+
+      <!-- Reset -->
+      <div class="filter-section">
+        <div class="filter-section__action">
+          <button onclick="fig.figure1.reset()">Reset Visualization</button>
+        </div>
+      </div>
+    </div>
+    <div class="figures-container__item">
+      <div class="vis1">
+        <div class="visualization-title">
+          <h1>League Of Legends Kills</h1>
+        </div>
+      </div>
+    </div>
+    <div class="figures-container__item">
+      <div id="vis2">
+      </div>
+    </div>
+
+  </div>
+
+  <script src='visualization.js' charset='utf-8'></script>
+</body>
+
+</html>

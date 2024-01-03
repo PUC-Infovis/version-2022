@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Fjalla One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Barlow Semi Condensed' rel='stylesheet'>
+    <title>Movies and TV-Shows</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Plataformas de Streaming</h1>
+        <h3>Por Bernardita Alliende</h3>
+        <p>En esta visualización se pueden ver las cuatro principales plataformas de streaming, las cuales corresponden a "Netflix", "hulu", "Prime Video" y "Disney+". El tamaño de los cuadrados indican la cantidad de películas y series en dicha plataforma. Al presionar alguna, se desplegarán las siguientes visualizaciones.</p>
+        <div id="vis-1">
+            <h2>Elige una plataforma</h2>
+        </div>
+        <div class="container-2">
+            <div id="vis-2">
+                <h2>Filtra por Fecha de Estreno y Rotten Tomatoes</h2>
+                <p>Cada punto del grafico de Año v/s Rating corresponde una pelicula o serie, que al pasarle el contenedor de color por encima, serán seleccionadas para verlas desplegadas en la visualización de la derecha.</p>
+            </div>
+            <div id="vis-3">
+                <h2>Movies and TV Shows</h2>
+                <p>
+                    Al presionar un item, al final de la página se mostrará la descripción principal.
+                    </p>
+                <p>Filtro:  
+                <select name="filterBy" id="filterBy">
+                    <option value="default">Todos</option>
+                    <option value="tvshows">TV Shows</option>
+                    <option value="movies">Movies</option>
+                </select></p>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

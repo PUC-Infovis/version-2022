@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Examen</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Propiedades inmobiliarias en la provincia de Santiago</h1>
+        
+        <h3>Selecciona comunas para visualizar</h3>
+        <div id="properties-map">
+            <svg id="vis-mapa-svg" width="600" height="600"></svg>
+            <div id="properties-filter">
+                <h2>Filtros</h2>
+                <div id="filter-1">
+                    <label for="filter-1">Tipo de Propiedad</label>
+                    <select id="filter-property-type">
+                        <option value="Departamento">Departamento</option>
+                        <option value="Casa">Casa</option>
+                    </select>
+                </div>
+                <div id="slider-container"></div>
+
+                <div id="filter-2">
+                    <label for="filter-2">Precio en UF</label>
+                    <div class="horizontal-flex">
+                        <div>
+                            <p>
+                                Mínimo
+                            </p>
+                            <input type="number" id="filter-price-min" min="0" max="1000000000" value="0">
+                        </div>
+                        <div>
+                            <p>
+                                Máximo
+                            </p>
+                            <input type="number" id="filter-price-max" min="0" max="1000000000" value="1000000000">
+                        </div>
+                    </div>
+                </div>
+                <div id="filter-3">
+                    <label for="filter-3">Superficie</label>
+                    <div class="horizontal-flex">
+                        <div>
+                            <p>
+                                Mínimo
+                            </p>
+                            <input type="number" id="filter-mts2-min" min="0" max="1000000000" value="0">
+                        </div>
+                        <div>
+                            <p>
+                                Máximo
+                            </p>
+                            <input type="number" id="filter-mts2-max" min="0" max="1000000000" value="1000000000">                    
+                        </div>
+                    </div>
+                </div>
+
+                <div id="filter-4">
+                    <label for="filter-4">Dormitorios</label>
+                    <div class="horizontal-flex">
+                        <div>
+                            <p>
+                                Mínimo
+                            </p>
+                            <input type="number" id="filter-bedrooms-min" min="0" max="100" value="0">
+                        </div>
+                        <div>
+                            <p>
+                                Máximo
+                            </p>
+                            <input type="number" id="filter-bedrooms-max" min="0" max="100" value="100">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="filter-5">
+                    <label for="filter-5">Baños</label>
+                    <div class="horizontal-flex">
+                        <div>
+                            <p>
+                                Mínimo
+                            </p>
+                            <input type="number" id="filter-bathrooms-min" min="0" max="100" value="0">
+                        </div>
+                        <div>
+                            <p>
+                                Máximo
+                            </p>
+                            <input type="number" id="filter-bathrooms-max" min="0" max="100">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="filter-6">
+                    <label for="filter-6">Tipo de transacción</label>
+                    <select id="filter-transaction-type">
+                        <option value="Venta">Venta</option>
+                        <option value="Arriendo">Arriendo</option>
+                    </select>
+
+                </div>
+
+                <div id="filter-7">
+                    <label for="filter-7">Particular</label>
+                    <select id="filter-particular">
+                        <option value="False">No</option>
+                        <option value="True">Si</option>
+                    </select>
+                </div>
+                
+                <button class="btn" id="btn-filter">Filtrar</button>
+                <button class="btn" id="btn-reset"> Resetear</button>
+            </div>
+        </div>
+
+        <h3 class="no-selected-communes">No hay comunas seleccionadas</h3>
+
+        <div id="vis-properties">
+        </div>
+        <div id="tooltip"></div>
+        <div id="closeButton">Cerrar</div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

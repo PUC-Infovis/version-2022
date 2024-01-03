@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <link rel="stylesheet" href="style_index.css">
+    <title>✈️ Aeronaves y flotas de aerolíneas a nivel mundial</title>
+</head>
+
+<script>
+function func1(that) {
+    if (that.value == "porTamano" || that.value == "porEdad") {
+        document.getElementById("btnAsc").style.display = "inline";
+        document.getElementById("btnDesc").style.display = "inline";
+    } else {
+        document.getElementById("btnAsc").style.display = "none";
+        document.getElementById("btnDesc").style.display = "none";
+    }
+}
+
+
+</script>
+<body>
+    <h1> ✈️ Aeronaves y flotas de aerolíneas a nivel mundial</h1>
+    <div class="container">
+        <div class="v1">
+            <div class="container2">
+                <ul>
+                    <li>Cada nodo representa una aerolínea diferente. El <b>tamaño</b> del nodo codifica el <b> tamaño de la flota actual</b> de cada aerolínea (mientras más grande, más grande es la flota).</li>
+                    <li>La <b>tonalidad del color</b> del nodo codifica la <b>edad promedio de la flota </b> (mientras más oscuro, más antigua es la flota).</li>
+                    <li>Es posible <b>filtrar</b> por fabricante y <b>ordenar</b> según tamaño u edad. También se puede <b>buscar</b> por nombre de aerolínea, donde los resultados con alguna coincidencia cambiarán a <span style="color: #03F7FF">este color.</span> </li>
+                    <li>Al seleccionar una aerolínea, la segunda visualización se <b>actualizará</b> con los datos de esa aerolínea.</li>
+                </ul> 
+            Buscar por aerolínea <input id="buscarPor" type="text">
+            <br><br>Filtrar por <select name="filtrar" id="filtrar">
+                <option value="predeterminado"> Predeterminado </option>
+                <option value="soloAirbus"> Sólo aeronaves Airbus </option>
+                <option value="soloBoeing"> Sólo aeronaves Boeing </option>
+                <option value="soloResto"> Aeronaves no Airbus ni Boeing </option>
+            </select>
+            Ordenar por <select onchange="func1(this);" name="ordenar" id="ordenar">
+                <option value="predeterminado"> Predeterminado </option>
+                <option value="porTamano"> Tamaño de flota </option>
+                <option value="porEdad"> Edad de flota </option>
+            </select>
+            <button id="btnAsc" style="display: none;"> Ascendente </button>
+            <button id="btnDesc" style="display: none;"> Descendente </button>
+            </div>
+
+            <div id="vis-1">
+            </div>  
+        </div>  
+
+        <div class="v2">
+            <div class="container3">
+                <ul>
+                    <li>En el gráfico inferior se presenta la <b>cantidad de aeronaves según modelo.</b> Se encuentra sincronizado con la visualización de nodos y los datos mostrados dependerán del filtro y aerolínea seleccionados.</li>
+                    <li>Por ejemplo, si se selecciona una aerolínea en el filtro <b>"Predeterminado"</b>, se mostrarán <b>todas las aeronaves</b> de esa aerolínea, pero con el filtro <b>"Sólo aeronaves Airbus"</b> mostrará sólo las <b>aeronaves Airbus</b> de esa aerolínea.</li>
+                    <li>Al seleccionar un filtro (teniendo o no una aerolínea seleccionada), el gráfico se <b>reseteará</b> mostrando los datos para todas las aerolíneas en conjunto dependiendo del filtro seleccionado.</li>
+                    <li>También es posible <b>filtrar</b> el gráfico inferior usando los botones de abajo. El gráfico siempre mostrará 30 modelos como máximo y ordenados de mayor a menor cantidad.</li>
+                </ul>
+                <button id="current"> Aeronaves funcionando </button>
+                <button id="orders"> Aeronaves en pedido </button>
+                <button id="historic"> Aeronaves retiradas </button>
+                <button id="total"> Aeronaves totales (actuales + retiradas) </button>
+            </div>
+            <div id="vis-2">
+            </div> 
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

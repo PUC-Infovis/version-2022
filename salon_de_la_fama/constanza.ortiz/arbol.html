@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Árbol genealógico</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="vis.css">
+  <link rel="icon" href="favicon.ico">
+
+</head>
+
+<body>
+  <!-- <button id="restart">Reactivar simulación</button> -->
+  <!-- <button id="save">Guardar nodos</button> -->
+  <h1 class="titulo">Árbol Familiar</h1>
+  <h2>¿Cómo usar esta herramienta?</h2>
+  <p>Puedes <b>navegar</b> a través del árbol genealógico moviéndote a través de él y haciendo zoom con la rueda de tu
+    mouse (en el caso de estar en celulares, pellizcando y extendiendo con los dedos).</p>
+  <p>En la parte inferior de la página se encuentra una <b>línea de tiempo</b> que contiene la cantidad de personas en
+    el árbol genealógico vivas por año, junto a momentos importantes en la historia.</p>
+  <p>Al <b>tocar</b> encima de una persona, se mostrará en la parte superior izquierda su información mientras el cursor
+    esté sobre el nombre de la persona, además de mostrar su ubicación en la línea de tiempo de la familia. Solo
+    aquellas personas que están en un círculo que no tiene transparencia pueden ser vistas en la línea de tiempo, el
+    resto tiene sus datos incompletos. Si ya no se
+    quiere ver información acerca de una persona se puede tocar sobre el botón reiniciar sobre la línea de tiempo.</p>
+  <a href="/"><button>Volver</button></a>
+  <br></br>
+  <div id="vis1"></div>
+  <h2 class="grafico2">Línea de tiempo: personas vivas por año</h2>
+  <br>
+  <div id="vis2">
+    <div class="botones">
+      <select name="filter" id="selectfilter">
+        <option value="">Ver todos</option>
+        <option value="M">Ver sólo mujeres</option>
+        <option value="H">Ver sólo hombres</option>
+      </select>
+      <button id="reiniciar">Reiniciar</button>
+    </div>
+  </div>
+
+  <div id="vis3">
+    <h2>¿Hay alguna persona en este árbol de cumpleaños hoy?</h2>
+    <h3 id="cumpleaños"></h3>
+  </div>
+  <script src='1_d3_force.js' charset='utf-8'></script>
+  <canvas id="canvas"></canvas>
+</body>
+
+</html>

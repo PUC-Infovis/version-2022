@@ -1,0 +1,251 @@
+body {
+    font-family: "Shippori Antique";
+    background-color: #343434;
+    color: #ffffff;
+    font-size: 15px;
+    margin: 5vh;
+}
+
+.word-highlight {
+    color: #FAA916;
+}
+
+#report-body {
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+
+.description {
+    text-align: justify;
+    text-justify: inter-word;
+    max-width: 900px;
+}
+
+a {
+    color: #5DA9E9;
+}
+
+/* Estilo para tabla tomado de: */
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss_table_fancy */
+
+#digimon-table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+#digimon-table td, #digimon-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#digimon-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #FAA916;
+    color: white;
+}
+
+#main-title {
+    text-align: center;
+}
+
+#sub-title {
+    width: 1343px;
+    margin: auto;
+}
+
+#tree-title {
+    text-align: center;
+}
+
+#digimon-vis {
+    display: flex;
+    gap: 50px;
+    width: 1343px;
+    margin: auto;
+}
+
+#digimon-search {
+    text-align: center;
+}
+
+#digimon-list {
+    height: 550px;
+    width: 242px;
+    border: 2px solid #ffffff;
+    overflow-y: scroll;
+    flex: 1;
+}
+
+/* Grid sacado de https://grid.layoutit.com/ */
+#digimon-comparator {
+    height: 550px;
+    border: 2px solid #ffffff;
+    flex: 4.325;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 0.7fr 1.3fr;
+    gap: 2px 2px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Details Stats Stats Stats Stats Stats Stats"
+      "Details Stats Stats Stats Stats Stats Stats"
+      "Details Stats Stats Stats Stats Stats Stats"
+      "Details Stats Stats Stats Stats Stats Stats"
+      "Details Selected Selected Selected Selected Selected Selected";
+}
+  
+#digimon-details { grid-area: Details; border: 2px solid white; }
+
+#digimon-selected { grid-area: Selected; border: 2px solid white; }
+
+#digimon-stats { grid-area: Stats; border: 2px solid white; }
+  
+
+#evolution-vis {
+    margin: auto;
+    width: 1343px;
+    height: 550px;
+    border: 2px solid #ffffff;
+}
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons-container-element {
+    margin-right: 10px;
+}
+
+
+/* CSS para el tooltip sacado de */
+/* https://bl.ocks.org/d3noob/97e51c5be17291f79a27705cef827da2 */
+
+div.tooltip-digimon {
+    position: absolute;
+    margin-left: 10px;
+    width: 175px;
+    height: 100px;
+    padding: 2px;
+    font: 13px sans-serif;
+    background: #FAFBFC;
+    color: #24292E;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+
+
+/* CSS para el select sacado de */
+/* https://getcssscan.com/css-buttons-examples */
+/* (Boton 4) */
+
+button {
+    background-color: #FAFBFC;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+    box-sizing: border-box;
+    color: #24292E;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    padding: 6px 16px;
+    position: relative;
+    transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-wrap: break-word;
+  }
+  
+button:hover {
+    background-color: lightgray;
+    text-decoration: none;
+    transition-duration: 0.1s;
+}
+
+select {
+    background-color: #FAFBFC;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+    box-sizing: border-box;
+    color: #24292E;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    padding: 6px 16px;
+    position: relative;
+    transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-wrap: break-word;
+}
+
+/* CSS para el texto plegable sacado de  */
+/* https://www.w3schools.com/howto/howto_js_curtain_menu.asp */
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    width: 100%;
+    text-align: center;
+    padding: 100px;
+    margin-top: -25px;
+}
+
+.overlay p {
+    font-size: 16px;
+    display: block;
+    transition: 0.3s;
+    max-width: 1200px;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+#context-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #999;
+    font-size: 18px;
+}
+
+#context-button:hover {
+    background-color: #777;
+    text-decoration: none;
+    transition-duration: 0.1s;
+}

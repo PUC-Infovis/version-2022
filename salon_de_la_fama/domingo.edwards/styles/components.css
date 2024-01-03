@@ -1,0 +1,235 @@
+/* https://brand.riotgames.com/en-us/league-of-legends/color */
+:root {
+   /* Color Pallete */
+
+   --white-1: rgb(240, 230, 210);
+
+  --blue-1: #CDFAFA;
+  --blue-2: #0AC8B9;
+  --blue-3: #0397AB;
+  --blue-4: #005A82;
+  --blue-5: #0A323C;
+  --blue-6: #091428;
+  --blue-7: #0A1428;
+
+  --gold-1: #F0E6D2;
+  --gold-2: #C8AA6E;
+  --gold-3: #C8AA6E;
+  --gold-4: #C89B3C;
+  --gold-5: #785A28;
+  --gold-6: #463714;
+  --gold-7: #32281E;
+
+  /* Background pallete */
+  --grey-1: #A09B8C;
+  --grey-1-5: #5B5A56;
+  --grey-2: #3C3C41;
+  --grey-3: #1E2328;
+  --grey-cool: #1E282D;
+
+  --hextech-black: #010A13;
+
+  /* Gradients */
+  --gradient-dark-blue-1: var(--blue-6);
+  --gradient-dark-blue-2: var(--blue-7);
+
+  --gradient-gold-1: var(--gold-5);
+  --gradient-gold-2: var(--gold-4);
+
+  --gradient-blue-1: var(--blue-4);
+  --gradient-blue-2: var(--blue-2);
+}
+
+/* Fonts */
+/* https://brand.riotgames.com/en-us/league-of-legends/typography */
+
+/* beaufortForLol */
+@font-face {
+  font-family: beaufortForLol;
+  src: url("./fonts/BeaufortForLoL-TTF/BeaufortforLOL-Regular.ttf");
+}
+
+@font-face {
+  font-family: beaufortForLol;
+  src: url("./fonts/BeaufortForLoL-TTF/BeaufortforLOL-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: beaufortForLol;
+  src: url("./fonts/BeaufortForLoL-TTF/BeaufortforLOL-Italic.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: beaufortForLol;
+  src: url("./fonts/BeaufortForLoL-TTF/BeaufortforLOL-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Spiegel */
+@font-face {
+  font-family: spiegel;
+  src: url("./fonts/Spiegel-TTF/Spiegel_TT_Regular.ttf");
+}
+
+@font-face {
+  font-family: spiegel;
+  src: url("./fonts/Spiegel-TTF/Spiegel_TT_Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: spiegel;
+  src: url("./fonts/Spiegel-TTF/Spiegel_TT_Regular_Italic.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: spiegel;
+  src: url("./fonts/Spiegel-TTF/Spiegel_TT_Bold_Italic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+* {
+  font-family: 'spiegel';
+  color: var(--white-1);
+}
+
+/* Main Layout */
+
+body {
+  padding: 3rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Texts */
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+}
+
+h3, h4 {
+  font-style: italic;
+}
+
+
+/* Inputs */
+button, select, input[type="range"], input[type="range"]::-webkit-slider-thumb {
+  background: var(--blue-5);
+  border: solid;
+  border-width: 1px;
+  border-color: var(--gold-4);
+  box-shadow: 0 0 2px 0 var(--gold-6);
+}
+
+button, select, input[type="range"] {
+  margin: 1em;
+}
+
+button:hover, select:hover, input[type="range"]:hover {
+  box-shadow: 0 0 4px 1px var(--gold-3);
+}
+
+button:hover, select:hover{
+  cursor: pointer;
+}
+
+/* Slider */
+input[type="range"] {
+  -webkit-appearance: none;
+  margin-right: 15px;
+  width: 200px;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  border: solid;
+  border-color: var(--gold-4);
+  border-width: 1px;
+  background-color: var(--blue-5);
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  transform: rotate(45deg);
+  cursor: ew-resize;
+}
+
+input[type=range]::-webkit-slider-runnable-track  {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+/* Selector */
+select {
+  height: 30px;
+  width: 200px;
+  background-color: var(--blue-5);
+  font-style: italic;
+}
+
+option {
+  text-align: start;
+}
+
+/* Buttons */
+button {
+  height: 30px;
+  padding: 5px;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button--big {
+  height: 100px;
+  padding: 20px 50px;
+  min-width: 200px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.button--medium {
+  height: 20px;
+  padding: 30px 30px;
+  min-width: 100px;
+  font-size: medium;
+  font-weight: bold;
+}
+
+
+/* Background */
+body {
+  background-color: var(--blue-6); /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, var(--gradient-dark-blue-1), var(--gradient-dark-blue-2));
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  max-width: 200px;
+}
+
+/* Spans */
+.unit {
+  font-weight: normal;
+  font-style: italic;
+}

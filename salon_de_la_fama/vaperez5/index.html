@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <script src='https://d3js.org/d3.v6.js'></script>
+    <title>League of sLegends</title>
+<link rel='stylesheet' href='./src/style.css'>
+</head>
+<body>
+    <div class="horizontal-flex-container" style="display: flex;">
+      <h1>League of Legends</h1>
+      <div class="descripcion">
+        <p>Para este trabajo se buscó realizar una visualización con temática de League of Legends. League of Legends o "LoL" como es apodado, 
+          es uno de los juegos en línea más populares, con millones de usuarios alrededor del mundo. Este juego se trata del enfrentamiento entre 
+          dos equipos, de 5 jugadores cada uno, con el objetivo de ir avanzando en el mapa llamado la “Grieta del Invocador” hasta destruir el “Nexus” enemigo. 
+          Para lograr el objetivo se requiere de estrategia, existen 138 campeones los cuales puede escoger cada jugador, siempre y cuando no lo hayan escogido antes.
+           Cada campeón es diferente, teniendo habilidades y estadísticas distintas. Los campeones son clasificados en 6 categorías distintas las cuales son Tanque, Peleador, 
+           Mago, Asesino, Tirador y Soporte.
+          Puedes útilizar essta herramienta para obtener información acerca de qué campeones utilizar dependiendo de la partida, que categoría y/o campeones tienen más victorias/derrotas/tasa 
+          de victoria y la interacción entre campeones (junto a que campeones es bueno o contra quienes es malo) para así poder tomar la mejor decisión que pueda llevar a tener 
+          más posibilidades de ganar el partido. Al seleccionar un campeón en la primera visualización se desplegará un segundo gráfico con los campeones con los cual tiene Sinergia
+          o los Counters de este campeón, dependiendo de lo que solicites. Los datos para la realización de esta visualización fueron extraidos de
+          <a href='https://www.kaggle.com/datasets/datasnaek/league-of-legends?resource=download&select=games.csv'>Kaggle</a> y luego fueron procesados. 
+        </p>
+      </div>
+    </div>
+    <div class="opcion-selection">
+      <p>Selecciona la categoria:</p>
+      <select name="select-opcion" id="select-opcion"></select>
+      <p>Clasificar por:</p>
+      <select name="select-opcion2" id="select-opcion2"></select>
+    </div>
+    <div id="float-container">
+      <div id="legend"></div>
+      <div id="graph-container"></div>
+    </div>
+    <p>Clasificar por:</p>
+    <select name="select-opcion3" id="select-opcion3"></select>
+    <div class="grilla">
+      <div id="graph-container2"></div>
+    </div>
+    <!-- <div>
+      <img src="https://ddragon.leagueoflegends.com/cdn/12.21.1/img/champion/Lux.png" alt="Flowers in Chania">
+    </div>
+     -->
+    <script type="module" src='./src/index.js'></script>
+
+    <footer>
+      <div className="FooterContent">
+        <p>Hecho por <a class = "fin" style="text-align: right;" href="https://github.com/vaperez5">Vicente Pérez</a> a.k.a
+          <a class = "fin" href="https://www.leagueofgraphs.com/es/summoner/las/tth+piterlolgila#championsData-ranked">"TTh Piterlolgila"</a>
+          
+        </p>
+        
+      </div>
+   </footer>
+
+</body>
+</html>
